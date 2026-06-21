@@ -50,22 +50,22 @@ const formatResult = (result: Awaited<ReturnType<typeof runAgent>>) => {
   console.log("📋 AGENT EXECUTION RESULT");
   console.log("=".repeat(60));
   
-  console.log(\`\n✅ Status: \${result.success ? "SUCCESS" : "FAILED"}");
-  console.log(\`📝 Message: \${result.message}\n");
+  console.log(`\n✅ Status: ${result.success ? "SUCCESS" : "FAILED"}`);
+  console.log(`📝 Message: ${result.message}\n`);
   
   if (result.filesModified.length > 0) {
     console.log("📁 Files Modified:");
-    result.filesModified.forEach((f) => console.log(\`  • \${f}"));
+    result.filesModified.forEach((f) => console.log(`  • ${f}`));
   }
   
   if (result.commandsExecuted.length > 0) {
     console.log("\n🔧 Commands Executed:");
-    result.commandsExecuted.forEach((c) => console.log(\`  • \${c}"));
+    result.commandsExecuted.forEach((c) => console.log(`  • ${c}`));
   }
   
   if (result.errors && result.errors.length > 0) {
     console.log("\n⚠️  Errors:");
-    result.errors.forEach((e) => console.log(\`  • \${e}"));
+    result.errors.forEach((e) => console.log(`  • ${e}`));
   }
   
   console.log("\n" + "=".repeat(60) + "\n");
@@ -87,14 +87,13 @@ const runAgent = async (prompt: string, options: { model?: string; workspace?: s
 
   try {
     console.log("🤖 Local Agent Starting...");
-    console.log(\`📍 Workspace: \${workspace}");
-    console.log(\`🧠 Model: \${model}\n");
+    console.log(`📍 Workspace: ${workspace}`);
+    console.log(`🧠 Model: ${model}\n`);
 
     // Get project structure for context
     console.log("📊 Analyzing project structure...");
     const projectStructure = await agent.getProjectStructure();
-    const context = \`Project Structure:\n\${projectStructure}\n\n
-Workspace: \${workspace}\`;
+    const context = `Project Structure:\n${projectStructure}\n\nWorkspace: ${workspace}`;
 
     // Get AI suggestions
     console.log("💭 Consulting AI for suggestions...\n");
