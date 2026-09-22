@@ -6,6 +6,23 @@
 
 English | [简体中文](README.zh-CN.md)
 
+> ### 📌 This fork
+>
+> This repository (`SagorT3K/ZeroCode`) is a **personal fork** of
+> [linuxhsj/openclaw-zero-token](https://github.com/linuxhsj/openclaw-zero-token), which is
+> itself a fork of [OpenClaw](https://github.com/openclaw/openclaw). It is tracked against
+> upstream and kept as a working copy for experiments — upstream remains the project to
+> follow for releases, issues and documentation.
+>
+> - **Upstream sync workflow:** [Sync With Upstream](#upstream-sync)
+> - **Licence:** MIT, inherited from upstream — see [LICENSE](LICENSE)
+> - **Fork tip when this notice was added:** `4537162` — *docs(experiments): add competitors research report with Top 10 analysis*
+>
+> Everything below this block — the table of contents, the quick start, the configuration
+> reference and the docs under `docs/zero-token/` — comes from upstream and applies to this
+> fork as-is.
+
+
 ---
 
 ## Table of Contents
